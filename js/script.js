@@ -7,7 +7,7 @@ import initMenuMobile from "./modules/menu-mobile.js"
 import initFuncionamento from "./modules/funcionamento.js"
 import initFetchAnimais from "./modules/fetch-animais.js"
 import initFetchBitcoin from "./modules/bitcoin.js"
-import { initTabNav } from "./modules/tabNavigation.js";
+import TabNav from "./modules/tabNavigation.js";
 import initAnimacaoScroll from "./modules/anima-scroll.js";
 
 
@@ -15,8 +15,9 @@ const scrollSuave = new ScrollSuave('[data-menu="suave"] a[href^="#"]');
 scrollSuave.init();
 const accordion = new Accordion('[data-anime="accordion"] dt');
 accordion.init();
+const tabNav = new TabNav('[data-tab="menu"] li', '[data-tab="content"] section');
+tabNav.init();
 
-initTabNav();
 initModal();
 initToolTip();
 initDropDownMenu();
