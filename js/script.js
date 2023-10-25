@@ -3,10 +3,10 @@ import Accordion from "./modules/accordion.js";
 import TabNav from "./modules/tabNavigation.js";
 import Modal from "./modules/modal.js"
 import ToolTip from "./modules/tooltip.js"
+import fetchAnimais from "./modules/fetch-animais.js"
 import initDropDownMenu from "./modules/dropdown-menu.js"
 import initMenuMobile from "./modules/menu-mobile.js"
 import initFuncionamento from "./modules/funcionamento.js"
-import initFetchAnimais from "./modules/fetch-animais.js"
 import initFetchBitcoin from "./modules/bitcoin.js"
 import initAnimacaoScroll from "./modules/anima-scroll.js";
 
@@ -25,10 +25,10 @@ modal.init();
 const toolTip = new ToolTip('[data-tooltip]');
 toolTip.init();
 
+fetchAnimais('../../animaisapi.json', '.numeros-grid');
 
 initDropDownMenu();
 initMenuMobile();
 initFuncionamento();
-initFetchAnimais();
 initFetchBitcoin();
 initAnimacaoScroll();
