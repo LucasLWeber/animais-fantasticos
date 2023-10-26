@@ -5,11 +5,11 @@ import Modal from "./modules/modal.js"
 import ToolTip from "./modules/tooltip.js"
 import fetchAnimais from "./modules/fetch-animais.js"
 import ScrollAnima from "./modules/scroll-anima.js";
+import fetchBitcoin from "./modules/bitcoin.js"
+import DropDownMenu from "./modules/dropdown-menu.js"
 
-import initDropDownMenu from "./modules/dropdown-menu.js"
 import initMenuMobile from "./modules/menu-mobile.js"
 import initFuncionamento from "./modules/funcionamento.js"
-import fetchBitcoin from "./modules/bitcoin.js"
 
 const scrollSuave = new ScrollSuave('[data-menu="suave"] a[href^="#"]');
 scrollSuave.init();
@@ -32,6 +32,8 @@ fetchBitcoin('https://blockchain.info/ticker', '.btc-preco');
 const scrollAnima = new ScrollAnima('[data-anime="scroll"]', );
 scrollAnima.init();
 
-initDropDownMenu();
+const dropDownMenu = new DropDownMenu('[data-dropdown]');
+dropDownMenu.init();
+
 initMenuMobile();
 initFuncionamento();
