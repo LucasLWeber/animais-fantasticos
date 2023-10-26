@@ -8,8 +8,7 @@ import ScrollAnima from "./modules/scroll-anima.js";
 import fetchBitcoin from "./modules/bitcoin.js"
 import DropDownMenu from "./modules/dropdown-menu.js"
 import MenuMobile from "./modules/menu-mobile.js"
-
-import initFuncionamento from "./modules/funcionamento.js"
+import Funcionamento from "./modules/funcionamento.js"
 
 const scrollSuave = new ScrollSuave('[data-menu="suave"] a[href^="#"]');
 scrollSuave.init();
@@ -38,4 +37,5 @@ dropDownMenu.init();
 const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]');
 menuMobile.init();
 
-initFuncionamento();
+const functionamento = new Funcionamento('[data-semana]');
+functionamento.init();
